@@ -3,7 +3,7 @@ const productData = require("./dummyProducts"); //
 const { OrderSchema } = require("../models/order");
 
 mongoose.connect(
-  "mongodb+srv://muhammadusmanameer45:123usman123@ecommerce.porx4hv.mongodb.net/?retryWrites=true&w=majority",
+  `mongodb+srv://${process.env.MONGODB_URI_USER_NAME}:${process.env.MONGODB_URI_PASSWORD}@ecommerce.porx4hv.mongodb.net/?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
